@@ -13,10 +13,8 @@
 
 <script>
 export default {
-  name: 'HomeNav',
-}
+  name: "HomeNav",
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>
