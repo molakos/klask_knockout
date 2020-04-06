@@ -1,14 +1,30 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+
 import Home from '../views/Home.vue'
+import CreateTournament from '../views/CreateTournament.vue'
+import NameTournamentForm from '../components/NameTournamentForm.vue'
+
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: Home
+    name: 'home',
+    component: Home,
+  },
+  {
+    path: '/create',
+    name: 'create',
+    component: CreateTournament,
+    children: [
+      {
+        name: 'name_tournament',
+        path: '/name_tournament',
+        component: NameTournamentForm
+      }
+    ]
   },
   {
     path: '/leaderboard',
