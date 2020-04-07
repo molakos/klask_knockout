@@ -1,6 +1,8 @@
+import { v4 as uuidv4 } from "uuid";
+
 export default {
   tournament: {
-    id: null,
+    id: uuidv4(),
     name: null,
     participants: [],
     rounds: [],
