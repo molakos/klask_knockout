@@ -5,4 +5,7 @@ export const actions = {
   addParticipants({ commit }, playerList) {
     commit("setPlayers", playerList);
   },
+  createRounds({ commit }) {
+    commit("generateRounds");
+  },
 };

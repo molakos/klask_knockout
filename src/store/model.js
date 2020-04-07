@@ -12,3 +12,11 @@ export const player = {
   totalWins: 0,
   name: null,
 };
+
+export const match = {
+  id: null,
+  players: [],
+  subscores: [0, 0],
+  scores: [0, 0],
+  nextMatchId: null,
+};

@@ -35,12 +35,13 @@ import { v4 as uuidv4 } from "uuid";
 export default {
   name: "AddPlayers",
   methods: {
-    ...mapActions(["addParticipants"]),
+    ...mapActions(["addParticipants", "createRounds"]),
     submit(e) {
       e.preventDefault();
 
       if (this.inputs.length % 4 === 0) {
         this.addParticipants(this.inputs);
+        this.createRounds();
         this.$router.push({ name: "add_players" });
       } else {
         window.alert("Number of participants must be dividable with 4!");
