@@ -22,12 +22,12 @@ const routes = [
     children: [
       {
         name: "name_tournament",
-        path: "/name_tournament",
+        path: "name_tournament",
         component: NameTournamentForm,
       },
       {
         name: "add_players",
-        path: "/add_players",
+        path: "add_players",
         component: AddPlayersForm,
       },
     ],
