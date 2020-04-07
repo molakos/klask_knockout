@@ -42,7 +42,6 @@ export default {
       if (this.inputs.length % 4 === 0) {
         this.addParticipants(this.inputs);
         this.createRounds();
-        this.$router.push({ name: "add_players" });
       } else {
         window.alert("Number of participants must be dividable with 4!");
       }

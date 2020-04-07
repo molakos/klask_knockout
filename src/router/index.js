@@ -3,6 +3,7 @@ import VueRouter from "vue-router";
 
 import Home from "../views/Home.vue";
 import CreateTournament from "../views/CreateTournament.vue";
+import Tournament from "../views/Tournament.vue";
 
 import NameTournamentForm from "../components/NameTournamentForm.vue";
 import AddPlayersForm from "../components/AddPlayersForm.vue";
@@ -31,6 +32,11 @@ const routes = [
         component: AddPlayersForm,
       },
     ],
+  },
+  {
+    path: "/tournament/:id/brackets",
+    name: "tournament_brackets",
+    component: Tournament,
   },
   {
     path: "/leaderboard",
