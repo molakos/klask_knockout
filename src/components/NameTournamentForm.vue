@@ -1,39 +1,37 @@
 <template>
   <form @submit="submit">
-    <label for="tournament-name">
-      Name your tournament
-    </label>
-    <input
-      id="tournament-name"
-      v-model="value"
-      autocomplete="off"
-      placeholder="e.g. Total Elimination"
+    <StyledInput
+      v-model="tournamentName"
+      v-bind:forId="'tournament-name'"
+      v-bind:label="'Name your tournament'"
     />
-    <button type="submit" :disabled="!value.length">
-      Proceed
-    </button>
+    <button type="submit" :disabled="!tournamentName.length">Proceed</button>
   </form>
 </template>
 
 <script>
 import { mapActions } from "vuex";
+import StyledInput from "../common/StyledInput";
 
 export default {
   name: "NameTournamentForm",
+  components: {
+    StyledInput,
+  },
   data() {
     return {
-      value: "",
+      tournamentName: "",
     };
   },
   methods: {
     ...mapActions(["nameTournament"]),
     submit() {
-      this.nameTournament(this.value);
+      this.nameTournament(this.tournamentName);
       this.$router.push({ name: "add_players" });
-      this.value = "";
+      this.tournamentName = "";
     },
   },
 };
 </script>
 
-<style scoped></style>
+<style scoped lang="scss"></style>
