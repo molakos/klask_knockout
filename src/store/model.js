@@ -12,7 +12,7 @@ export default {
 export const player = {
   id: null,
   totalWins: 0,
-  name: null,
+  name: "",
 };
 
 export const match = {
