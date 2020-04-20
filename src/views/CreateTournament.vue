@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="container">
     <h1>Let's create a tournament</h1>
     <router-view />
   </div>
@@ -7,6 +7,6 @@
 
 <script>
 export default {
-  name: "CreateTournament",
+  name: "CreateTournament"
 };
 </script>

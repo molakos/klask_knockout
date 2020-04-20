@@ -14,7 +14,7 @@ const routes = [
   {
     path: "/",
     name: "home",
-    component: Home,
+    component: Home
   },
   {
     path: "/create",
@@ -24,19 +24,19 @@ const routes = [
       {
         name: "name_tournament",
         path: "name_tournament",
-        component: NameTournamentForm,
+        component: NameTournamentForm
       },
       {
         name: "add_players",
         path: "add_players",
-        component: AddPlayersForm,
-      },
-    ],
+        component: AddPlayersForm
+      }
+    ]
   },
   {
     path: "/tournament/:id/brackets",
     name: "tournament_brackets",
-    component: Tournament,
+    component: Tournament
   },
   {
     path: "/leaderboard",
@@ -45,12 +45,12 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () =>
-      import(/* webpackChunkName: "about" */ "../views/Leaderboard.vue"),
-  },
+      import(/* webpackChunkName: "about" */ "../views/Leaderboard.vue")
+  }
 ];
 
 const router = new VueRouter({
-  routes,
+  routes
 });
 
 export default router;
