@@ -1,11 +1,11 @@
 <template>
-  <div>
-    <h1>Welcome to Braxx</h1>
+  <div class="container">
+    <h1>Klask Tournament Dashboard</h1>
     <ul>
       <li>
-        <router-link :to="{ name: 'name_tournament' }">
-          Let's create a new tournament
-        </router-link>
+        <router-link class="option-text" :to="{ name: 'name_tournament' }"
+          >Let's create a new tournament</router-link
+        >
       </li>
     </ul>
   </div>
@@ -17,4 +17,13 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped lang="scss">
+.option-text {
+  text-transform: uppercase;
+  font-weight: 700;
+  color: $dark-purple;
+}
+.option-text:hover {
+  color: $light-purple;
+}
+</style>
