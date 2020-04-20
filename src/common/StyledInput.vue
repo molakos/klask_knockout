@@ -39,11 +39,10 @@ export default {
 .styled-input-root {
   margin: $margin-small;
   position: relative;
-  width: 14rem;
 
   .styled-input-label {
     position: absolute;
-    transform: translate(6px, 8px) scale(1);
+    transform: translate(6px, 6px) scale(1);
     transform-origin: top left;
     display: block;
     font-weight: 700;
@@ -70,7 +69,7 @@ export default {
 
   input {
     width: 100%;
-    height: 2rem;
+    height: 1.875rem;
     line-height: 1.85rem;
     border: 0;
     padding: 0.375rem;
