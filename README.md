@@ -1,5 +1,3 @@
-# surfly-assignment
-
 ## Project setup
 ```
 npm install
